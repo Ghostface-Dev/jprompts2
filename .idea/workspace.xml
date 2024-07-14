@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f389cb4-bbae-4efd-99ee-c3671998c686" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/container/TypeFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/imp/TypeFactoryImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/service/InputPromptType.java" afterDir="false" />
+    <list default="true" id="4f389cb4-bbae-4efd-99ee-c3671998c686" name="Changes" comment="add input type as a type prompt">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/ChoicePromptType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/ConfirmPromptType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/InputPromptType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/Prompt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/imp/Prompt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/container/Option.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/imp/Action.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/imp/Question.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/service/PromptService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/service/QuestionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/container/TypeFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/imp/TypeFactoryImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/service/InputPromptType.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +67,20 @@
       <option name="project" value="LOCAL" />
       <updated>1720929322756</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add input type as a type prompt">
+      <option name="closed" value="true" />
+      <created>1720976809232</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720976809232</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="add input type as a type prompt" />
+    <option name="LAST_COMMIT_MESSAGE" value="add input type as a type prompt" />
   </component>
 </project>
