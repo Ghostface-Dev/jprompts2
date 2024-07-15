@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f389cb4-bbae-4efd-99ee-c3671998c686" name="Changes" comment="defined prompt list">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/core/Prompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/core/Prompt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ConfirmPrompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ConfirmPrompt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/InputPrompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/InputPrompt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ListPrompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ListPrompt.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,7 +53,7 @@
       <module name="gChoices" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.ghostface.dev.main.*" />
+          <option name="PATTERN" value="org.ghostface.dev.core.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

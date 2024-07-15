@@ -7,16 +7,21 @@ import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Range;
 
 import java.util.NoSuchElementException;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        ListPrompt prompt = new ListPrompt("customerPrompts");
+        ListPrompt prompt = new ListPrompt("Welcome","customerPrompts") {
+        };
 
-        Prompt.run("customerPrompts");
-        System.out.println(Prompt.getMyPrompts());
+        prompt.addQuestion("Create Customer");
+        prompt.addQuestion("Deposit");
+        prompt.addQuestion("Withdraw");
+        Prompt.runPrompt("customerPrompts");
 
-
+        System.out.println(prompt.getInput());
     }
 
 

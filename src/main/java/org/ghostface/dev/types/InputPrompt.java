@@ -1,16 +1,11 @@
 package org.ghostface.dev.types;
 
 import org.ghostface.dev.core.Prompt;
-import org.jetbrains.annotations.NotNull;
 
-public final class InputPrompt extends Prompt {
+public final class InputPrompt {
 
     public InputPrompt() {
-        super("input");
-    }
-
-    @Override
-    public void execute() {
 
     }
+
 }

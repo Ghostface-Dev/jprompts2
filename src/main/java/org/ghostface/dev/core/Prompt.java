@@ -1,18 +1,16 @@
 package org.ghostface.dev.core;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
 public abstract class Prompt {
-    private final @NotNull String name;
+    private @Nullable String name;
     private static final @NotNull Map<@NotNull String, @NotNull Prompt> myPrompts = new HashMap<>();
 
-    protected Prompt(@NotNull String promptName) {
-        this.name = promptName;
-    }
 
-    public static void run(@NotNull String name) {
+    public static void runPrompt(@NotNull String name) {
         try {
             myPrompts.get(name).execute();
         } catch (NullPointerException error) {
@@ -20,17 +18,21 @@ public abstract class Prompt {
         }
     }
 
-    public abstract void execute();
+    protected abstract void execute();
 
     protected final @NotNull Map<String, Prompt> getPrompts() {
         return myPrompts;
     }
 
-    public static @NotNull Set<String> getMyPrompts() {
+    public static @NotNull Set<String> getAllPrompts() {
         return myPrompts.keySet();
     }
 
-    public final @NotNull String getName() {
+    public final @Nullable String getName() {
         return name;
+    }
+
+    protected void setName(@NotNull String name) {
+        this.name = name;
     }
 }
