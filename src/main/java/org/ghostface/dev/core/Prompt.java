@@ -22,7 +22,7 @@ public abstract class Prompt {
 
     public abstract void execute();
 
-    protected @NotNull Map<String, Prompt> getPrompts() {
+    protected final @NotNull Map<String, Prompt> getPrompts() {
         return myPrompts;
     }
 
@@ -30,7 +30,7 @@ public abstract class Prompt {
         return myPrompts.keySet();
     }
 
-    public @NotNull String getName() {
+    public final @NotNull String getName() {
         return name;
     }
 }

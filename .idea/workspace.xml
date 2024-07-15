@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f389cb4-bbae-4efd-99ee-c3671998c686" name="Changes" comment="defined prompt list">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/core/Prompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/core/Prompt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ListPrompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ListPrompt.java" afterDir="false" />
@@ -40,7 +39,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/gkill/Documents/GitHub/gChoices/src/main/java/org/ghostface/dev/Main.java"
   }
