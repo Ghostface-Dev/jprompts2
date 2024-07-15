@@ -1,30 +1,22 @@
 package org.ghostface.dev.main;
 
+import org.ghostface.dev.core.Prompt;
+import org.ghostface.dev.types.ListPrompt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Range;
 
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
-import java.util.function.Function;
 
 public class Main {
     public static void main(String[] args) {
 
-        Map<String, Runnable> map = new HashMap<>();
-        map.put("hello", Main::test);
-
-        System.out.println(map.values());
-        map.get("hello").run();
+        Prompt prompt = new ListPrompt();
+        
     }
 
-    private static String test() {
-       Customer customer = new Customer("1", "gg", "aa", "123", "@");
-       System.out.println(customer.getNumber());
-       return customer.getEmail();
-    }
 
 }
 

@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f389cb4-bbae-4efd-99ee-c3671998c686" name="Changes" comment="add prompts type">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/container/TypePromptFactory.java" afterDir="false" />
+    <list default="true" id="4f389cb4-bbae-4efd-99ee-c3671998c686" name="Changes" comment="implements prompt">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/core/Prompt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/core/PromptFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ConfirmPrompt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/InputPrompt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ListPrompt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/ChoicePromptType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/ChoicePromptType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/ConfirmPromptType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/ConfirmPromptType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/InputPromptType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/InputPromptType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/Prompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/Prompt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/container/TypePromptFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/ChoicePromptType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/ConfirmPromptType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/InputPromptType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/Prompt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/imp/Prompt.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -101,13 +107,30 @@
       <option name="project" value="LOCAL" />
       <updated>1720981440700</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="implements prompt">
+      <option name="closed" value="true" />
+      <created>1721016224327</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721016224327</updated>
+    </task>
+    <task id="LOCAL-00005" summary="implements prompt">
+      <option name="closed" value="true" />
+      <created>1721016297193</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721016297193</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="add input type as a type prompt" />
     <MESSAGE value="add prompts type" />
-    <option name="LAST_COMMIT_MESSAGE" value="add prompts type" />
+    <MESSAGE value="implements prompt" />
+    <option name="LAST_COMMIT_MESSAGE" value="implements prompt" />
   </component>
 </project>
