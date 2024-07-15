@@ -17,6 +17,7 @@ public class Main {
         map.put("hello", Main::test);
 
         System.out.println(map.values());
+        map.get("hello").run();
     }
 
     private static String test() {
