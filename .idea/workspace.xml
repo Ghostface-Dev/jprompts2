@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f389cb4-bbae-4efd-99ee-c3671998c686" name="Changes" comment="implements prompt">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/core/Prompt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/core/PromptFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ConfirmPrompt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/InputPrompt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ListPrompt.java" afterDir="false" />
+    <list default="true" id="4f389cb4-bbae-4efd-99ee-c3671998c686" name="Changes" comment="defined">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/container/TypePromptFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/ChoicePromptType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/ConfirmPromptType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/InputPromptType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/Prompt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/imp/Prompt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/core/Prompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/core/Prompt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/core/PromptFactory.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ConfirmPrompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ConfirmPrompt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/InputPrompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/InputPrompt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ListPrompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ListPrompt.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721016297193</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="defined">
+      <option name="closed" value="true" />
+      <created>1721072442734</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721072442734</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -131,6 +133,7 @@
     <MESSAGE value="add input type as a type prompt" />
     <MESSAGE value="add prompts type" />
     <MESSAGE value="implements prompt" />
-    <option name="LAST_COMMIT_MESSAGE" value="implements prompt" />
+    <MESSAGE value="defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="defined" />
   </component>
 </project>

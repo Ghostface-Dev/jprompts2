@@ -2,26 +2,31 @@ package org.ghostface.dev.core;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-public abstract class Prompt implements PromptFactory {
-    private final @NotNull String promptName;
-    private final @NotNull List<Prompt> prompts = new ArrayList<>();
+public abstract class Prompt {
+    private final @NotNull String name;
+    private static final @NotNull Map<String, Prompt> myPrompts = new HashMap<>();
 
     protected Prompt(@NotNull String promptName) {
-        this.promptName = promptName;
+        this.name = promptName;
     }
 
-    protected abstract void execute();
-
-    @Override
-    public final @NotNull String getName() {
-        return promptName;
+    public static void execute(String name) {
+        myPrompts.get(name).execute();
     }
 
-    @Override
-    public final @NotNull List<Prompt> getPrompts() {
-        return this.prompts;
+    public abstract void execute();
+
+    protected @NotNull Map<String, Prompt> getPrompts() {
+        return myPrompts;
+    }
+
+    public @NotNull Set<String> getMyPrompts() {
+        return getPrompts().keySet();
+    }
+
+    public @NotNull String getName() {
+        return name;
     }
 }

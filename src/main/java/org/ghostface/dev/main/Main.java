@@ -6,15 +6,16 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Range;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.NoSuchElementException;
 
 public class Main {
     public static void main(String[] args) {
 
-        Prompt prompt = new ListPrompt();
-        
+        ListPrompt listPrompt = new ListPrompt("customerPrompts");
+        System.out.println(listPrompt.getMyPrompts());
+
+        Prompt.execute("customerPrompts");
+
     }
 
 
