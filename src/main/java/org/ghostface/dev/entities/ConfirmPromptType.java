@@ -1,10 +1,8 @@
 package org.ghostface.dev.entities;
 
+import org.ghostface.dev.container.TypePromptFactory;
 import org.jetbrains.annotations.NotNull;
 
-public class ConfirmPromptType extends Prompt{
+public class ConfirmPromptType implements TypePromptFactory {
 
-    public ConfirmPromptType(@NotNull String message) {
-        super(message);
-    }
 }
