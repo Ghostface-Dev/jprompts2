@@ -8,23 +8,15 @@ import java.util.List;
 import java.util.Scanner;
 
 public final class ListPrompt extends Prompt {
-    private final @NotNull List<String> listPrompts = new ArrayList<>();
-    private @NotNull Scanner scanner;
+    private final @NotNull List<String> allQuestions = new ArrayList<>();
+    private final @NotNull Scanner scannerList = new Scanner(System.in);
 
     public ListPrompt(String promptName) {
         super(promptName);
-        this.scanner = new Scanner(System.in);
         getPrompts().put(this.getName(), this);
     }
 
-
-    /*
-     public void prompt(@NotNull String message, List<String> options) {
-        System.out.println(message);
-        for (int i = 0; i < options.size(); i++) {
-            System.out.println((i + 1) + "-" + options.get(i));
-        }
-    } */
+    
 
     @Override
     public void execute() {
@@ -32,6 +24,6 @@ public final class ListPrompt extends Prompt {
     }
 
     public @NotNull List<String> getListPrompts() {
-        return listPrompts;
+        return allQuestions;
     }
 }

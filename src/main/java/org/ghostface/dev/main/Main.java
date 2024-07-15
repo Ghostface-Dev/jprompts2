@@ -11,11 +11,10 @@ import java.util.NoSuchElementException;
 public class Main {
     public static void main(String[] args) {
 
-        ListPrompt listPrompt = new ListPrompt("customerPrompts");
-        System.out.println(listPrompt.getMyPrompts());
+        ListPrompt prompt = new ListPrompt("customerPrompts");
 
-        Prompt.execute("customerPrompts");
-
+        Prompt.run("customerPrompts");
+        System.out.println(Prompt.getMyPrompts());
     }
 
 

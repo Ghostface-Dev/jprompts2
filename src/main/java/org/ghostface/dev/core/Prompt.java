@@ -6,14 +6,18 @@ import java.util.*;
 
 public abstract class Prompt {
     private final @NotNull String name;
-    private static final @NotNull Map<String, Prompt> myPrompts = new HashMap<>();
+    private static final @NotNull Map<@NotNull String, @NotNull Prompt> myPrompts = new HashMap<>();
 
     protected Prompt(@NotNull String promptName) {
         this.name = promptName;
     }
 
-    public static void execute(String name) {
-        myPrompts.get(name).execute();
+    public static void run(@NotNull String name) {
+        try {
+            myPrompts.get(name).execute();
+        } catch (NullPointerException error) {
+            throw new NullPointerException("This prompt name not exist");
+        }
     }
 
     public abstract void execute();
@@ -22,8 +26,8 @@ public abstract class Prompt {
         return myPrompts;
     }
 
-    public @NotNull Set<String> getMyPrompts() {
-        return getPrompts().keySet();
+    public static @NotNull Set<String> getMyPrompts() {
+        return myPrompts.keySet();
     }
 
     public @NotNull String getName() {
