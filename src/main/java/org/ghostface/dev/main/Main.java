@@ -13,15 +13,20 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        ListPrompt prompt = new ListPrompt("Welcome","customerPrompts") {
-        };
+        ListPrompt prompt = new ListPrompt("Welcome","customerPrompts");
 
         prompt.addQuestion("Create Customer");
-        prompt.addQuestion("Deposit");
+        prompt.addQuestion("Create Transaction Account");
         prompt.addQuestion("Withdraw");
-        Prompt.runPrompt("customerPrompts");
 
-        System.out.println(prompt.getInput());
+        prompt.execute();
+
+        if (prompt.getInput() == 1) {
+            Customer customer = new Customer("1", "henrique", "sousa", "1198", "@email");
+            System.out.println(customer.getName());
+        }
+
+
     }
 
 

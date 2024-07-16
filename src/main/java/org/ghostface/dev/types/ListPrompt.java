@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ListPrompt extends Prompt {
+public final class ListPrompt extends Prompt {
     private final @NotNull List<String> allQuestions = new ArrayList<>();
     private final @NotNull Scanner scannerList = new Scanner(System.in);
     private final @NotNull String message;
@@ -22,18 +22,21 @@ public class ListPrompt extends Prompt {
     }
 
     @Override
-    public final void execute() {
+    public void execute() {
+        input = 0;
         System.out.println(message);
         for (int i = 0; i < allQuestions.size(); i++) {
             System.out.println((i + 1) + " - " + allQuestions.get(i));
         }
-        this.input = checkers(scannerList.nextInt());
+        input = checkers(input);
     }
 
     private int checkers(int choice) {
-        while (choice > (allQuestions.size() + 1) || choice <= 0) {
+        choice = scannerList.nextInt();
+        while (choice <= 0 || choice > (allQuestions.size())) {
             System.out.println("Invalid command");
-            execute();
+            System.out.println(getInput());
+            choice = scannerList.nextInt();
         }
         return choice;
     }
