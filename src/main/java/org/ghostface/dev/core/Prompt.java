@@ -1,5 +1,6 @@
 package org.ghostface.dev.core;
 
+import org.ghostface.dev.exceptions.UnsupportedSizeException;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -16,7 +17,7 @@ public abstract class Prompt {
     * */
     private static final @NotNull Map<@NotNull String, @NotNull Prompt> allPrompts = new HashMap<>();
 
-    protected Prompt(@NotNull String name) {
+    public Prompt(@NotNull String name) {
         this.name = name;
     }
 
@@ -32,15 +33,15 @@ public abstract class Prompt {
     * The prompt type must have a way to add new questions
     *
     * */
-    public abstract void addQuestion(@NotNull String question);
+    public abstract void addQuestion(@NotNull String question) throws UnsupportedSizeException;
 
     /*
     *
-    * get the prompt map for constructors implements
+    * add the prompt map for constructors
     *
     * */
-    protected final @NotNull Map<String, Prompt> getPrompts() {
-        return allPrompts;
+    protected final void addPrompt(@NotNull String name, @NotNull Prompt prompt) {
+        allPrompts.put(name, prompt);
     }
 
     // static initializers

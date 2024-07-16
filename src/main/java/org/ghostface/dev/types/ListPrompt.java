@@ -19,14 +19,14 @@ public final class ListPrompt extends Prompt {
         super(promptName);
         this.message = initialMessage;
         this.input = 0;
-        getPrompts().put(this.getName(), this);
+        addPrompt(this.getName(), this);
     }
 
     public ListPrompt(@NotNull String promptName) {
         super(promptName);
         this.message = "";
         this.input = 0;
-        getPrompts().put(this.getName(), this);
+        addPrompt(this.getName(), this);
     }
 
     @Override
@@ -47,7 +47,6 @@ public final class ListPrompt extends Prompt {
         choice = scannerList.nextInt();
         while (choice <= 0 || choice > (allQuestions.size())) {
             System.out.println("Invalid command");
-            System.out.println(getInput());
             choice = scannerList.nextInt();
         }
         return choice;

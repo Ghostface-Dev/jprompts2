@@ -1,39 +1,45 @@
 package org.ghostface.dev.main;
 
 import org.ghostface.dev.core.Prompt;
+import org.ghostface.dev.exceptions.UnsupportedSizeException;
+import org.ghostface.dev.types.ConfirmPrompt;
 import org.ghostface.dev.types.ListPrompt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Range;
 
 import java.util.NoSuchElementException;
-import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedSizeException {
 
-        ListPrompt prompt = new ListPrompt("customerPrompts");
+        ListPrompt Listprompt = new ListPrompt("customerPrompts");
 
-        prompt.addQuestion("Create Customer");
-        prompt.addQuestion("Create Transaction Account");
-        prompt.addQuestion("Withdraw");
+        Listprompt.addQuestion("Create Customer");
+        Listprompt.addQuestion("Create Transaction Account");
+        Listprompt.addQuestion("Withdraw");
 
-        System.out.println(prompt.getAllQuestions());
+        System.out.println(Listprompt.getAllQuestions());
 
-        Prompt.runPrompt("customerPrompts");
+        ConfirmPrompt confirmPrompt = new ConfirmPrompt("customerPromptsConfirm");
 
-        if (prompt.getInput() == 1) {
-            Customer customer = new Customer("1", "henrique", "sousa", "1198", "@email");
-            System.out.println(customer.getName());
+        Listprompt.execute();
+
+        confirmPrompt.addQuestion("Sure?");
+        confirmPrompt.execute();
+
+        if (confirmPrompt.getInput() == 'Y' || confirmPrompt.getInput() == 'y') {
+            if (Listprompt.getInput() == 1) {
+                Customer customer = new Customer("1", "henrique", "sousa", "1198", "@email");
+                System.out.println(customer.getName());
+            }
+            if (Listprompt.getInput() == 3) {
+                System.out.println("Customer not have account");
+            }
         }
 
-        prompt.execute();
 
-        if (prompt.getInput() == 3) {
-            System.out.println("Customer not have account");
-        }
     }
-
 
 }
 
