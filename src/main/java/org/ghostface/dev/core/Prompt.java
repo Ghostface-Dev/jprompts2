@@ -9,12 +9,16 @@ public abstract class Prompt {
     /*
     * The prompt name is important for run the prompt thoughts Prompt Class
     * */
-    private @Nullable String name;
+    private final @NotNull String name;
 
     /*
     * All prompts and its objects are storage in this map
     * */
     private static final @NotNull Map<@NotNull String, @NotNull Prompt> allPrompts = new HashMap<>();
+
+    protected Prompt(@NotNull String name) {
+        this.name = name;
+    }
 
     /*
     *
@@ -54,12 +58,8 @@ public abstract class Prompt {
 
     // getters
 
-    public final @Nullable String getName() {
+    public final @NotNull String getName() {
         return name;
     }
 
-    // setter for defined name in the map
-    protected void setName(@NotNull String name) {
-        this.name = name;
-    }
 }

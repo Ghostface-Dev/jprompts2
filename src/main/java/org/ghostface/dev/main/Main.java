@@ -18,6 +18,8 @@ public class Main {
         prompt.addQuestion("Create Transaction Account");
         prompt.addQuestion("Withdraw");
 
+        System.out.println(prompt.getAllQuestions());
+
         Prompt.runPrompt("customerPrompts");
 
         if (prompt.getInput() == 1) {

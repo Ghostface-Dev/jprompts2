@@ -3,7 +3,9 @@ package org.ghostface.dev.types;
 import org.ghostface.dev.core.Prompt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.Range;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,19 +14,18 @@ public final class ListPrompt extends Prompt {
     private final @NotNull List<String> allQuestions = new ArrayList<>();
     private final @NotNull Scanner scannerList = new Scanner(System.in);
     private final @NotNull String message;
-    private int input;
-
+    private @Range(from = 0, to = 10) int input;
     public ListPrompt(@NotNull String initialMessage , @NotNull String promptName) {
+        super(promptName);
         this.message = initialMessage;
         this.input = 0;
-        setName(promptName);
         getPrompts().put(this.getName(), this);
     }
 
     public ListPrompt(@NotNull String promptName) {
+        super(promptName);
         this.message = "";
         this.input = 0;
-        setName(promptName);
         getPrompts().put(this.getName(), this);
     }
 
@@ -58,11 +59,12 @@ public final class ListPrompt extends Prompt {
     }
 
     // getters
-    public @NotNull List<String> getAllQuestions() {
-        return allQuestions;
+    public @NotNull ArrayList<String> getAllQuestions() {
+        return new ArrayList<>(allQuestions);
     }
 
     public int getInput() {
         return input;
     }
+
 }
