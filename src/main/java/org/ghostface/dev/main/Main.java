@@ -1,9 +1,7 @@
 package org.ghostface.dev.main;
 
-import org.ghostface.dev.core.Prompt;
-import org.ghostface.dev.exceptions.UnsupportedSizeException;
-import org.ghostface.dev.types.ConfirmPrompt;
-import org.ghostface.dev.types.ListPrompt;
+import org.ghostface.dev.type.ConfirmPrompt;
+import org.ghostface.dev.type.ListPrompt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Range;
@@ -11,7 +9,7 @@ import org.jetbrains.annotations.Range;
 import java.util.NoSuchElementException;
 
 public class Main {
-    public static void main(String[] args) throws UnsupportedSizeException {
+    public static void main(String[] args)  {
 
         ListPrompt Listprompt = new ListPrompt("customerPrompts");
 
@@ -51,7 +49,6 @@ final class Customer {
     private final @NotNull String email;
     @Nullable
     TransactionAccount transactionAccount;
-
 
     public Customer(@NotNull String id, @NotNull String name, @NotNull String surname, @NotNull String number, @NotNull String email) {
         constructStringValidation(name, surname, id, number, email);

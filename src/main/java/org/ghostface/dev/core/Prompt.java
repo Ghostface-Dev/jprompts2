@@ -6,15 +6,15 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
-public abstract class Prompt {
+public abstract class Prompt extends InputAbstract {
     /*
-    * The prompt name is important for run the prompt thoughts Prompt Class
-    * */
+     * The prompt name is important for run the prompt thoughts Prompt Class
+     * */
     private final @NotNull String name;
 
     /*
-    * All prompts and its objects are storage in this map
-    * */
+     * All prompts and its objects are storage in this map
+     * */
     private static final @NotNull Map<@NotNull String, @NotNull Prompt> allPrompts = new HashMap<>();
 
     public Prompt(@NotNull String name) {
@@ -22,24 +22,24 @@ public abstract class Prompt {
     }
 
     /*
-    *
-    * New prompts types must have their own design in the terminal
-    *
-    * */
+     *
+     * New prompts types must have their own design in the terminal
+     *
+     * */
     public abstract void execute();
 
     /*
-    *
-    * The prompt type must have a way to add new questions
-    *
-    * */
+     *
+     * The prompt type must have a way to add new questions
+     *
+     * */
     public abstract void addQuestion(@NotNull String question) throws UnsupportedSizeException;
 
     /*
-    *
-    * add the prompt map for constructors
-    *
-    * */
+     *
+     * add the prompt map for constructors
+     *
+     * */
     protected final void addPrompt(@NotNull String name, @NotNull Prompt prompt) {
         allPrompts.put(name, prompt);
     }

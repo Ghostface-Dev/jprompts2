@@ -1,4 +1,4 @@
-package org.ghostface.dev.types;
+package org.ghostface.dev.type;
 
 import org.ghostface.dev.core.Prompt;
 import org.ghostface.dev.exceptions.UnsupportedSizeException;
@@ -18,7 +18,7 @@ public final class ConfirmPrompt extends Prompt {
         this.input = 0;
     }
 
-    private final char checkers(char value) {
+    private char checkers(char value) {
         value = scannerConfirm.next().charAt(0);
         while (value != 'y' && value != 'n' && value != 'Y' && value != 'N') {
             System.out.println("invalid command");
@@ -37,14 +37,17 @@ public final class ConfirmPrompt extends Prompt {
     }
 
     @Override
-    public void addQuestion(@NotNull String question) throws UnsupportedSizeException {
+    public void addQuestion(@NotNull String question) {
         if (!this.questions.isEmpty()) {
-            throw new UnsupportedSizeException("This prompt is already used as '" + this.questions.getFirst() + "'");
+            try {
+                throw new UnsupportedSizeException("This prompt is already used as '" + this.questions.getFirst() + "'");
+            } catch (UnsupportedSizeException e) {
+                throw new RuntimeException(e);
+            }
         }
         this.questions.addFirst(question);
     }
 
-    @NotNull
     public char getInput() {
         return input;
     }
