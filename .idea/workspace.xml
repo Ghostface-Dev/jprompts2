@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f389cb4-bbae-4efd-99ee-c3671998c686" name="Changes" comment="building prompts logic">
+    <list default="true" id="4f389cb4-bbae-4efd-99ee-c3671998c686" name="Changes" comment="defined ListPrompt class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/core/Prompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/core/Prompt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ListPrompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/types/ListPrompt.java" afterDir="false" />
     </list>
@@ -137,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721086479199</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="defined ListPrompt class">
+      <option name="closed" value="true" />
+      <created>1721091707559</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1721091707559</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -148,6 +157,7 @@
     <MESSAGE value="defined" />
     <MESSAGE value="defined prompt list" />
     <MESSAGE value="building prompts logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="building prompts logic" />
+    <MESSAGE value="defined ListPrompt class" />
+    <option name="LAST_COMMIT_MESSAGE" value="defined ListPrompt class" />
   </component>
 </project>

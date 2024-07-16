@@ -21,6 +21,13 @@ public final class ListPrompt extends Prompt {
         getPrompts().put(this.getName(), this);
     }
 
+    public ListPrompt(@NotNull String promptName) {
+        this.message = "";
+        this.input = 0;
+        setName(promptName);
+        getPrompts().put(this.getName(), this);
+    }
+
     @Override
     public void execute() {
         input = 0;
@@ -31,6 +38,10 @@ public final class ListPrompt extends Prompt {
         input = checkers(input);
     }
 
+    /*
+    * Is a god practice deal with possibles users responses;
+    *
+    * */
     private int checkers(int choice) {
         choice = scannerList.nextInt();
         while (choice <= 0 || choice > (allQuestions.size())) {
@@ -41,10 +52,12 @@ public final class ListPrompt extends Prompt {
         return choice;
     }
 
+    @Override
     public void addQuestion(@NotNull String question) {
         allQuestions.add(question);
     }
 
+    // getters
     public @NotNull List<String> getAllQuestions() {
         return allQuestions;
     }

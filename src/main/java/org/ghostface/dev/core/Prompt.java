@@ -6,32 +6,59 @@ import org.jetbrains.annotations.Nullable;
 import java.util.*;
 
 public abstract class Prompt {
+    /*
+    * The prompt name is important for run the prompt thoughts Prompt Class
+    * */
     private @Nullable String name;
-    private static final @NotNull Map<@NotNull String, @NotNull Prompt> myPrompts = new HashMap<>();
 
+    /*
+    * All prompts and its objects are storage in this map
+    * */
+    private static final @NotNull Map<@NotNull String, @NotNull Prompt> allPrompts = new HashMap<>();
 
+    /*
+    *
+    * New prompts types must have their own design in the terminal
+    *
+    * */
+    public abstract void execute();
+
+    /*
+    *
+    * The prompt type must have a way to add new questions
+    *
+    * */
+    public abstract void addQuestion(@NotNull String question);
+
+    /*
+    *
+    * get the prompt map for constructors implements
+    *
+    * */
+    protected final @NotNull Map<String, Prompt> getPrompts() {
+        return allPrompts;
+    }
+
+    // static initializers
     public static void runPrompt(@NotNull String name) {
         try {
-            myPrompts.get(name).execute();
+            allPrompts.get(name).execute();
         } catch (NullPointerException error) {
             throw new NullPointerException("This prompt name not exist");
         }
     }
 
-    protected abstract void execute();
-
-    protected final @NotNull Map<String, Prompt> getPrompts() {
-        return myPrompts;
-    }
-
     public static @NotNull Set<String> getAllPrompts() {
-        return myPrompts.keySet();
+        return allPrompts.keySet();
     }
+
+    // getters
 
     public final @Nullable String getName() {
         return name;
     }
 
+    // setter for defined name in the map
     protected void setName(@NotNull String name) {
         this.name = name;
     }

@@ -11,22 +11,25 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        ListPrompt prompt = new ListPrompt("Welcome","customerPrompts");
+        ListPrompt prompt = new ListPrompt("customerPrompts");
 
         prompt.addQuestion("Create Customer");
         prompt.addQuestion("Create Transaction Account");
         prompt.addQuestion("Withdraw");
 
-        prompt.execute();
+        Prompt.runPrompt("customerPrompts");
 
         if (prompt.getInput() == 1) {
             Customer customer = new Customer("1", "henrique", "sousa", "1198", "@email");
             System.out.println(customer.getName());
         }
 
+        prompt.execute();
 
+        if (prompt.getInput() == 3) {
+            System.out.println("Customer not have account");
+        }
     }
 
 
