@@ -1,43 +1,16 @@
 package org.ghostface.dev.main;
 
-import org.ghostface.dev.type.ConfirmPrompt;
-import org.ghostface.dev.type.ListPrompt;
+import org.ghostface.dev.Command;
+import org.ghostface.dev.Prompt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Range;
 
-import java.util.NoSuchElementException;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args)  {
 
-        ListPrompt Listprompt = new ListPrompt("customerPrompts");
-
-        Listprompt.addQuestion("Create Customer");
-        Listprompt.addQuestion("Create Transaction Account");
-        Listprompt.addQuestion("Withdraw");
-
-        System.out.println(Listprompt.getAllQuestions());
-
-        ConfirmPrompt confirmPrompt = new ConfirmPrompt("customerPromptsConfirm");
-
-        Listprompt.execute();
-
-        confirmPrompt.addQuestion("Sure?");
-        confirmPrompt.execute();
-
-        if (confirmPrompt.getInput() == 'Y' || confirmPrompt.getInput() == 'y') {
-            if (Listprompt.getInput() == 1) {
-                Customer customer = new Customer("1", "henrique", "sousa", "1198", "@email");
-                System.out.println(customer.getName());
-            }
-            if (Listprompt.getInput() == 3) {
-                System.out.println("Customer not have account");
-            }
-        }
-
-
-    }
 
 }
 
@@ -121,5 +94,6 @@ final class TransactionAccount {
 
     public void setBalance(@Range(from = 0, to = Integer.MAX_VALUE) double balance) {
         this.balance = balance;
+    }
     }
 }

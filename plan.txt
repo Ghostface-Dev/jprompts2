@@ -1,0 +1,24 @@
+CommandLine
+	- Command
+		- Prompt{listas de prompts (strings) e commandos}
+
+	- Script
+		- TypeScript
+			-List - é um script que executa um comando
+			-Input
+			-Confirm
+		- AbstractPrompt
+
+Prompt tem listas de prompts que são comandos que executam scripts e retornam o input do usuario
+
+
+command line
+    - command
+        - Pode executar um script
+    - Script
+            - tipos de script
+                - executa ação
+                - retorna um input
+    - Prompt
+        - Conjunto de palavras
+            - executa um script
