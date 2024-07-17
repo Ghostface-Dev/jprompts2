@@ -12,7 +12,7 @@ CommandLine
 Prompt tem listas de prompts que são comandos que executam scripts e retornam o input do usuario
 
 
-command line
+
     - command
         - Pode executar um script
     - Script
@@ -22,3 +22,10 @@ command line
     - Prompt
         - Conjunto de palavras
             - executa um script
+
+ou seja:
+
+command - executa um commando (script)
+    - prompt - script - é um script
+        - prompt é um comando
+

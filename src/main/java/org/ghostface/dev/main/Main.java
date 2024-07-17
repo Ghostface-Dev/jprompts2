@@ -1,7 +1,5 @@
 package org.ghostface.dev.main;
 
-import org.ghostface.dev.Command;
-import org.ghostface.dev.Prompt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Range;
