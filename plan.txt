@@ -11,8 +11,6 @@ CommandLine
 
 Prompt tem listas de prompts que são comandos que executam scripts e retornam o input do usuario
 
-
-
     - command
         - Pode executar um script
     - Script
@@ -25,7 +23,7 @@ Prompt tem listas de prompts que são comandos que executam scripts e retornam o
 
 ou seja:
 
-command - executa um commando (script)
-    - prompt - script - é um script
+command - executa um prompt
+    - prompt executa um script
         - prompt é um comando
 
