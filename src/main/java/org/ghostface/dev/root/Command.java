@@ -17,7 +17,7 @@ public class Command {
     private static final @NotNull Map<@NotNull String, Command> commandList = new HashMap<>();
 
     public static void execute(@NotNull Prompt instance) {
-
+        instance.getScript().execute(instance.getQuestionList());
     }
 
     public static void execute(@NotNull String commandName) throws NullCommandException {

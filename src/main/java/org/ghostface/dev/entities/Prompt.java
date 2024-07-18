@@ -7,6 +7,7 @@ import org.ghostface.dev.root.Command;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.LinkedList;
+import java.util.Objects;
 
 public class Prompt extends Command {
 
@@ -17,26 +18,30 @@ public class Prompt extends Command {
         if (scriptType.equalsIgnoreCase("list")) {
             this.script = new ListScript();
         } else if (scriptType.equalsIgnoreCase("confirm")) {
-            script = new ConfirmScript();
+            script = new ConfirmScript(scriptType);
         } else if (scriptType.equalsIgnoreCase("input")) {
             this.script = new InputScript();
         }
     }
 
-    public final void addQuestion(@NotNull String question, @NotNull Command command) {
-        addCommand(question, this);
-        addList(question);
+    public final void addQuestion(@NotNull String question) {
+        if (this.script.equals(new ConfirmScript("confirm"))) {
+            this.questionList.addFirst(question);
+        } else if (this.script.equals(new ListScript())) {
+            this.questionList.add(question);
+        }
     }
 
     private void addList(@NotNull String question) {
         questionList.add(question);
     }
 
-    LinkedList<@NotNull String> getQuestionList() {
+    public LinkedList<@NotNull String> getQuestionList() {
         return questionList;
     }
 
-    private @NotNull Script getScript() {
+    public @NotNull Script getScript() {
         return script;
     }
+
 }

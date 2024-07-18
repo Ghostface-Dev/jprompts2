@@ -16,4 +16,9 @@ public final class InputScript implements Script {
     public @NotNull Input getInput() {
         return null;
     }
+
+    @Override
+    public @NotNull String execute(@NotNull LinkedList<@NotNull String> questionList) {
+        return null;
+    }
 }
