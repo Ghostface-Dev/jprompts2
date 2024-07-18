@@ -27,3 +27,20 @@ command - executa um prompt
     - prompt executa um script
         - prompt é um comando
 
+
+
+O executar do script tem que vir um input
+
+o checkers é necessario? ou opcional?
+
+por enquanto vai ser opcional
+
+getInput retorna a instancia necessaria
+
+getInput.getValue retonarna o valor que precisa.
+
+execute precisa retornar o getInput
+
+execute roda o script - roda o checkers e retorna o input
+                            - se o checkers for true = prossegue
+                            - se não = ele roda o design denovo

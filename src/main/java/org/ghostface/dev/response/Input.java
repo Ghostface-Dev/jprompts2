@@ -6,6 +6,10 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Input {
-    protected static @NotNull Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+    private final @NotNull Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+    private final @NotNull String input = sc.nextLine();
 
+    public @NotNull String value() {
+        return input;
+    }
 }

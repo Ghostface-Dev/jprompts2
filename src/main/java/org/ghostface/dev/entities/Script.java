@@ -11,4 +11,6 @@ public interface Script {
 
     @NotNull Input getInput();
 
+    @NotNull Input execute(@NotNull LinkedList<@NotNull String> questionList);
+
 }

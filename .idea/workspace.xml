@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f389cb4-bbae-4efd-99ee-c3671998c686" name="Changes" comment="inital commit 2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/Script.java" afterDir="false" />
+    <list default="true" id="4f389cb4-bbae-4efd-99ee-c3671998c686" name="Changes" comment="input defined">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/Prompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/Prompt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/plan.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/Script.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/entities/Script.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/impl/ConfirmScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/impl/ConfirmScript.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/impl/InputScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/impl/InputScript.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/impl/ListScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/impl/ListScript.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/request/Script.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/request/impl/ConfirmScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/impl/ConfirmScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/request/impl/InputScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/impl/InputScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/request/impl/ListScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/impl/ListScript.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/response/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/response/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/response/type/InputAsInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/response/type/InputAsString.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/root/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ghostface/dev/root/Command.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -234,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721266703342</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="input defined">
+      <option name="closed" value="true" />
+      <created>1721273169550</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1721273169550</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -251,6 +261,7 @@
     <MESSAGE value="defined classes" />
     <MESSAGE value="redoing aplication" />
     <MESSAGE value="inital commit 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="inital commit 2" />
+    <MESSAGE value="input defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="input defined" />
   </component>
 </project>

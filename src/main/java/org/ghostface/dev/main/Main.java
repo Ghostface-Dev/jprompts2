@@ -1,6 +1,9 @@
 package org.ghostface.dev.main;
 
 import org.ghostface.dev.entities.Prompt;
+import org.ghostface.dev.entities.Script;
+import org.ghostface.dev.impl.ListScript;
+import org.ghostface.dev.root.Command;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Range;
@@ -11,6 +14,8 @@ public class Main {
     public static void main(String[] args)  {
 
         Prompt prompt = new Prompt("list");
+
+        Script script = new ListScript();
 
 
 }

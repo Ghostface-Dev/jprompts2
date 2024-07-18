@@ -2,12 +2,11 @@ package org.ghostface.dev.impl;
 
 import org.ghostface.dev.entities.Script;
 import org.ghostface.dev.response.Input;
-import org.ghostface.dev.response.type.InputAsInt;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.LinkedList;
 
-public class ListScript implements Script {
+public final class ListScript implements Script {
 
     @Override
     public void outDesign(@NotNull LinkedList<@NotNull String> questionList) {
@@ -17,9 +16,23 @@ public class ListScript implements Script {
     }
 
     @Override
-    public @NotNull InputAsInt getInput() {
-        return new InputAsInt();
+    public @NotNull Input getInput() {
+        return new Input();
     }
 
+    @Override
+    public @NotNull Input execute(@NotNull LinkedList<@NotNull String> questionList) {
+        outDesign(questionList);
+        getInput();
+        while (!checkers(getInput(), questionList)) {
+            System.out.println("Invalid command");
+            outDesign(questionList);
+            getInput();
+        }
+        return getInput();
+    }
 
+    private boolean checkers(Input input, @NotNull LinkedList<@NotNull String> questionList) {
+        return Integer.parseInt(input.value()) <= 0 || Integer.parseInt(input.value()) > questionList.size();
+    }
 }
