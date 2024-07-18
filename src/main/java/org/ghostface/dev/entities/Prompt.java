@@ -1,18 +1,19 @@
-package org.ghostface.dev;
+package org.ghostface.dev.entities;
 
-import org.ghostface.dev.request.Script;
-import org.ghostface.dev.request.impl.ConfirmScript;
-import org.ghostface.dev.request.impl.InputScript;
-import org.ghostface.dev.request.impl.ListScript;
+import org.ghostface.dev.impl.ConfirmScript;
+import org.ghostface.dev.impl.InputScript;
+import org.ghostface.dev.impl.ListScript;
 import org.ghostface.dev.root.Command;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.LinkedList;
 
-public class Prompt implements Command {
+public class Prompt extends Command {
 
     private @NotNull Script script;
+    private final LinkedList<@NotNull String> questionList = new LinkedList<>();
 
-    private Prompt(@NotNull String scriptType) {
+    public Prompt(@NotNull String scriptType) {
         if (scriptType.equalsIgnoreCase("list")) {
             this.script = new ListScript();
         } else if (scriptType.equalsIgnoreCase("confirm")) {
@@ -24,6 +25,15 @@ public class Prompt implements Command {
 
     public final void addQuestion(@NotNull String question, @NotNull Command command) {
         addCommand(question, this);
+        addList(question);
+    }
+
+    private void addList(@NotNull String question) {
+        questionList.add(question);
+    }
+
+    LinkedList<@NotNull String> getQuestionList() {
+        return questionList;
     }
 
     private @NotNull Script getScript() {

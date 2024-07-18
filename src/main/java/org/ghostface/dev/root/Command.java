@@ -11,31 +11,31 @@ import java.util.Set;
 /*
 * A command interface for control the prompts
 * */
-public interface Command {
+public class Command {
 
-    static void execute(@NotNull Command instance) {
+    private static final @NotNull Map<@NotNull String, Command> commandList = new HashMap<>();
+
+    public static void execute(@NotNull Command instance) {
 
     }
 
-    static void execute(@NotNull String commandName) throws NullCommandException {
-        if (commandList().containsKey(commandName)) {
+    public static void execute(@NotNull String commandName) throws NullCommandException {
+        if (commandList.containsKey(commandName)) {
 
         }
-        if (!commandList().containsKey(commandName)) {
+        if (commandList.containsKey(commandName)) {
             throw new NullCommandException("Command not exist");
         }
     }
 
-    default void addCommand(@NotNull String commandName, @NotNull Command command) {
-        commandList().put(commandName, command);
+    public static @NotNull Set<@NotNull String> commandSet() {
+        return commandList.keySet();
     }
 
-    private static @NotNull Map<@NotNull String, Command> commandList() {
-        return new HashMap<>();
+    protected void addCommand(@NotNull String commandName, @NotNull Command command) {
+        commandList.put(commandName, command);
     }
 
-    static @NotNull Set<@NotNull String> commandSet() {
-        return commandList().keySet();
-    }
+
 
 }

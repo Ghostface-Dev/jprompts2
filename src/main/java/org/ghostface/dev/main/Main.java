@@ -1,5 +1,6 @@
 package org.ghostface.dev.main;
 
+import org.ghostface.dev.entities.Prompt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Range;
@@ -8,6 +9,8 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args)  {
+
+        Prompt prompt = new Prompt("list");
 
 
 }

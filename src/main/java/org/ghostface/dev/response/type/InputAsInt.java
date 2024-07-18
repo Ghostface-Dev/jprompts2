@@ -1,4 +1,11 @@
 package org.ghostface.dev.response.type;
 
-public class InputAsInt {
+import org.ghostface.dev.response.Input;
+
+public class InputAsInt extends Input {
+    private final int value = sc.nextInt();
+
+    public int getValue() {
+        return value;
+    }
 }
