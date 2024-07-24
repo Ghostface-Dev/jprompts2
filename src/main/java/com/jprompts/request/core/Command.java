@@ -1,26 +1,19 @@
-package com.jprompts.request;
+package com.jprompts.request.core;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public final class Command {
-
     private static final @NotNull Scanner sc = new Scanner(System.in).useLocale(Locale.US);
-    // set amarzenando todos os comandos
     private static final @NotNull Set<@NotNull Prompt> promptSet = new HashSet<>();
 
-    // vá atrás de input no terminal
     public static void insert() {
-        @NotNull String v = sc.next();
+        @NotNull String v = sc.nextLine();
         runPrompt(v);
     }
 
-    // verificadores de prompt (se existe)
-    private static boolean checker(@NotNull String name) {
+    public static boolean containsPrompt(@NotNull String name) {
         for (@NotNull Prompt prompt : promptSet) {
             if (prompt.getName().equalsIgnoreCase(name)) {
                 return true;
@@ -29,9 +22,8 @@ public final class Command {
         return false;
     }
 
-    // rodar o prompt
     private static void runPrompt(@NotNull String name) {
-        if (checker(name)) {
+        if (containsPrompt(name)) {
             for (@NotNull Prompt prompt: promptSet) {
                 if (prompt.getName().equalsIgnoreCase(name)) {
                     prompt.execute();
@@ -40,16 +32,16 @@ public final class Command {
         }
     }
 
-    // contem prompt?
-    public static boolean containsPrompt(@NotNull String name) {
-        return checker(name);
+    public static void add(@NotNull Prompt prompt) {
+        promptSet.add(prompt);
     }
 
-    // adicionar prompt
-
-    // remover prompt
-
-    // listar prompts
-
+    public static @NotNull String allPrompts() {
+        @NotNull ArrayList<@NotNull String> array = new ArrayList<>();
+        for (@NotNull Prompt prompt : promptSet) {
+            array.add(prompt.getName());
+        }
+        return array.toString();
+    }
 
 }
