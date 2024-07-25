@@ -1,7 +1,9 @@
-package com.jprompts.main;
+package com.jprompts;
 
-import com.jprompts.core.Command;
+import com.jprompts.util.Command;
 import com.jprompts.prompt.PrintHelloWorldPrompt;
+
+import java.util.Scanner;
 
 
 public class Main {
@@ -13,7 +15,6 @@ public class Main {
         while (true) {
             Command.insert();
         }
-
     }
 
 }

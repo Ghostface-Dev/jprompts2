@@ -1,6 +1,7 @@
 package com.jprompts.script;
 
 import com.jprompts.core.Script;
+import com.jprompts.util.Out;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.LinkedHashMap;
@@ -19,7 +20,7 @@ public final class Input implements Script {
     public void execute() {
         for (Map.Entry<@NotNull String, @NotNull String> s : questions.entrySet()) {
             System.out.print(" - " + s.getKey() + ": ");
-            questions.put(s.getKey(), Script.response());
+            questions.put(s.getKey(), Out.nextLine());
         }
         if (!checker()) {
             System.out.println("Something is wrong with answers. Try again.");

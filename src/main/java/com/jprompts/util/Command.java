@@ -1,5 +1,6 @@
-package com.jprompts.core;
+package com.jprompts.util;
 
+import com.jprompts.core.Prompt;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;

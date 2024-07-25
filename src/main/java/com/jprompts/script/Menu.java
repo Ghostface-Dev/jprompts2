@@ -1,6 +1,7 @@
 package com.jprompts.script;
 
 import com.jprompts.core.Script;
+import com.jprompts.util.Out;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -23,7 +24,7 @@ public class Menu implements Script {
     public void execute() {
         AtomicInteger i = new AtomicInteger(1);
         questions.forEach((k, v) -> System.out.println(i.getAndIncrement() + " - " + k));
-        answer = Script.response();
+        answer = Out.next();
         if (!checker()) {
             System.out.printf("You need to choose between 1 and %d%n", questions.size());
             execute();
