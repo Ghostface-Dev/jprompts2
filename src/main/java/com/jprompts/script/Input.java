@@ -21,6 +21,10 @@ public final class Input implements Script {
             System.out.print(" - " + s.getKey() + ": ");
             questions.put(s.getKey(), Script.response());
         }
+        if (!checker()) {
+            System.out.println("Something is wrong with answers. Try again.");
+            execute();
+        }
     }
 
     @Override
@@ -28,8 +32,7 @@ public final class Input implements Script {
         return this.questions.get(question);
     }
 
-    @Override
-    public boolean checker() {
+    private boolean checker() {
         for (Map.Entry<@NotNull String, @NotNull String> entry : questions.entrySet()) {
             if (entry.getValue().isEmpty() || entry.getValue().length() > 30) {
                 return false;

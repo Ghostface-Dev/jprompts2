@@ -27,8 +27,13 @@ public final class Command {
             for (@NotNull Prompt prompt: promptSet) {
                 if (prompt.getName().equalsIgnoreCase(name)) {
                     prompt.execute();
+                    System.out.println(name + " executed");
                 }
             }
+        }
+        if (!containsPrompt(name)) {
+            System.out.println("Prompt not found");
+            insert();
         }
     }
 
