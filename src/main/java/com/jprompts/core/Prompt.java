@@ -16,8 +16,4 @@ public interface Prompt {
     void execute(@NotNull String @NotNull... args);
 
 
-    /*
-    * AbstractPrompt provide less effort required to implement prompt interface
-    * */
-
 }

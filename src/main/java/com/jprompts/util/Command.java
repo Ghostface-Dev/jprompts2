@@ -4,6 +4,7 @@ import com.jprompts.core.Prompt;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public final class Command {
     private static final @NotNull Scanner sc = new Scanner(System.in).useLocale(Locale.US);
@@ -15,25 +16,19 @@ public final class Command {
     }
 
     public static boolean containsPrompt(@NotNull String name) {
-        for (@NotNull Prompt prompt : promptSet) {
-            if (prompt.getName().equalsIgnoreCase(name)) {
-                return true;
-            }
-        }
-        return false;
+        return promptSet.stream().anyMatch(prompt -> prompt.getName().equalsIgnoreCase(name));
     }
 
     private static void runPrompt(@NotNull String name) {
-        if (containsPrompt(name)) {
-            for (@NotNull Prompt prompt: promptSet) {
-                if (prompt.getName().equalsIgnoreCase(name)) {
-                    prompt.execute();
-                    System.out.println(name + " executed");
-                }
-            }
-        }
-        if (!containsPrompt(name)) {
-            System.out.println("Prompt not found");
+        Optional<@NotNull Prompt> optional = promptSet.stream()
+                .filter(prompt -> prompt.getName().equalsIgnoreCase(name))
+                .findFirst();
+
+        if (optional.isPresent()) {
+            optional.get().execute();
+            System.out.println(name + " executed");
+        } else {
+            System.out.printf("%nPrompt not found");
             insert();
         }
     }
@@ -43,11 +38,14 @@ public final class Command {
     }
 
     public static @NotNull String allPrompts() {
-        @NotNull ArrayList<@NotNull String> array = new ArrayList<>();
-        for (@NotNull Prompt prompt : promptSet) {
-            array.add(prompt.getName());
-        }
-        return array.toString();
+        return promptSet.stream()
+                .map(Prompt::getName)
+                .collect(Collectors.joining(","));
     }
 
+    // object
+
+    private Command() {
+        throw new UnsupportedOperationException();
+    }
 }
