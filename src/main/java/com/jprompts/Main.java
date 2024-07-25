@@ -15,6 +15,8 @@ public class Main {
         while (true) {
             Command.insert();
         }
+
+
     }
 
 }

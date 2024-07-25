@@ -8,10 +8,6 @@ import java.util.Scanner;
 public final class Out {
     private static final @NotNull Scanner sc = new Scanner(System.in);
 
-    private Out() {
-        throw new UnsupportedOperationException();
-    }
-
     public static @NotNull String nextLine() {
         return sc.nextLine();
     }
@@ -26,5 +22,10 @@ public final class Out {
 
     public static double nextDouble() {
         return sc.nextDouble();
+    }
+
+    // object
+    private Out() {
+        throw new UnsupportedOperationException();
     }
 }

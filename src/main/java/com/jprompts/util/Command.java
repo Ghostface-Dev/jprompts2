@@ -20,15 +20,15 @@ public final class Command {
     }
 
     private static void runPrompt(@NotNull String name) {
-        Optional<@NotNull Prompt> optional = promptSet.stream()
-                .filter(prompt -> prompt.getName().equalsIgnoreCase(name))
-                .findFirst();
-
-        if (optional.isPresent()) {
-            optional.get().execute();
+        if (containsPrompt(name)) {
+            for (@NotNull Prompt prompt : promptSet) {
+                if (prompt.getName().equalsIgnoreCase(name)) {
+                    prompt.execute();
+                }
+            }
             System.out.println(name + " executed");
         } else {
-            System.out.printf("%nPrompt not found");
+            System.out.printf("%nPrompt not found%n");
             insert();
         }
     }
