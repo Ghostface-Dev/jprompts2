@@ -1,41 +1,30 @@
 package com.jprompts.script;
 
-import com.jprompts.core.Script;
+import com.jprompts.core.Script.*;
 import com.jprompts.util.Out;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
-public final class Input implements Script {
-    private final @NotNull Map<@NotNull String, @Nullable String> questions = new LinkedHashMap();
-
-    @Override
-    public void addQuestion(@NotNull String question) {
-        this.questions.put(question, null);
-    }
+public final class Input extends AbstractScript {
 
     @Override
     public void execute() {
-        questions.replaceAll((k,v) -> {System.out.print(" - " + k + ": "); return Out.nextLine();});
-        if (!checker()) {
-            System.out.println("Something is wrong with answers. Try again.");
+        getQuestions().replaceAll((k,v) -> {
+            System.out.print(" - " + k + ": "); return Out.nextLine();
+        });
+
+        if (!validate(this::checker)) {
+            System.out.printf("%nSomething is wrong with answers. Try again.%n");
             execute();
         }
     }
 
     @Override
     public @Nullable String getAnswer(@NotNull String question) {
-        return this.questions.get(question);
+        return getQuestions().get(question);
     }
 
-    private boolean checker() {
-        for (Map.Entry<@NotNull String, @NotNull String> entry : questions.entrySet()) {
-            if (entry.getValue().isEmpty() || entry.getValue().length() > 30) {
-                return false;
-            }
-        }
-        return true;
+    private boolean checker(@NotNull String answer) {
+        return !answer.isEmpty() && answer.length() <= 30;
     }
 }
