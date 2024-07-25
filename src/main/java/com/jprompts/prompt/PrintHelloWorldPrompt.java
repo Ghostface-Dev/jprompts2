@@ -1,14 +1,14 @@
 package com.jprompts.prompt;
 
+import com.jprompts.core.Prompt;
 import com.jprompts.core.Script;
+import com.jprompts.script.Input;
 import org.jetbrains.annotations.NotNull;
-
-import com.jprompts.script.Menu;
 
 import java.util.Objects;
 
-public class PrintHelloWorldPrompt extends AbstractPrompt {
-    private final @NotNull Script menu = new Menu();
+public class PrintHelloWorldPrompt implements Prompt {
+    private final @NotNull Script input = new Input();
 
     @Override
     public @NotNull String getName() {
@@ -17,13 +17,13 @@ public class PrintHelloWorldPrompt extends AbstractPrompt {
 
     @Override
     public void execute(@NotNull String @NotNull ... args) {
-        menu.addQuestion("Hello World!");
-        menu.addQuestion("Olá Mundo!");
+        input.addQuestion("Hello World");
+        input.addQuestion("Olá Mundo");
 
-        menu.execute();
+        input.execute();
 
-        if (Objects.equals(menu.getAnswer("Hello World!"), "2")) {
-            System.out.println("This is brazil!");
+        if (Objects.equals(input.getAnswer("Olá Mundo"), "brazil")) {
+            System.out.println("correct");
         }
     }
 }

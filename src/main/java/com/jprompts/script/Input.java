@@ -3,25 +3,22 @@ package com.jprompts.script;
 import com.jprompts.core.Script;
 import com.jprompts.util.Out;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Set;
 
 public final class Input implements Script {
-    private final @NotNull Map<@NotNull String, @NotNull String> questions = new LinkedHashMap();
+    private final @NotNull Map<@NotNull String, @Nullable String> questions = new LinkedHashMap();
 
     @Override
     public void addQuestion(@NotNull String question) {
-        this.questions.put(question, "");
+        this.questions.put(question, null);
     }
 
     @Override
     public void execute() {
-        for (Map.Entry<@NotNull String, @NotNull String> s : questions.entrySet()) {
-            System.out.print(" - " + s.getKey() + ": ");
-            questions.put(s.getKey(), Out.nextLine());
-        }
+        questions.replaceAll((k,v) -> {System.out.print(" - " + k + ": "); return Out.nextLine();});
         if (!checker()) {
             System.out.println("Something is wrong with answers. Try again.");
             execute();
@@ -29,7 +26,7 @@ public final class Input implements Script {
     }
 
     @Override
-    public @NotNull String getAnswer(@NotNull String question) {
+    public @Nullable String getAnswer(@NotNull String question) {
         return this.questions.get(question);
     }
 

@@ -24,7 +24,7 @@ public class Menu implements Script {
     public void execute() {
         AtomicInteger i = new AtomicInteger(1);
         questions.forEach((k, v) -> System.out.println(i.getAndIncrement() + " - " + k));
-        answer = Out.next();
+        answer = Out.nextLine();
         if (!checker()) {
             System.out.printf("You need to choose between 1 and %d%n", questions.size());
             execute();
