@@ -1,4 +1,4 @@
-package com.jprompts.request.exception;
+package com.jprompts.exception;
 
 public class PromptNotFoundException extends RuntimeException{
     public PromptNotFoundException() {

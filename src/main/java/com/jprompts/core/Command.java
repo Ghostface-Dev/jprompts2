@@ -1,4 +1,4 @@
-package com.jprompts.request.core;
+package com.jprompts.core;
 
 import org.jetbrains.annotations.NotNull;
 

@@ -1,9 +1,12 @@
-package com.jprompts.request.prompt;
+package com.jprompts.prompt;
 
-import com.jprompts.request.core.Prompt.*;
+import com.jprompts.core.Script;
 import org.jetbrains.annotations.NotNull;
 
+import com.jprompts.script.Menu;
+
 public class PrintHelloWorldPrompt extends AbstractPrompt {
+    private final @NotNull Script menu = new Menu();
 
     @Override
     public @NotNull String getName() {
@@ -12,6 +15,6 @@ public class PrintHelloWorldPrompt extends AbstractPrompt {
 
     @Override
     public void execute(@NotNull String @NotNull ... args) {
-        System.out.println("Hello world");
+
     }
 }

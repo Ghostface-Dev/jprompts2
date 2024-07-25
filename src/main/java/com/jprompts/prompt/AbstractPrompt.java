@@ -1,11 +1,14 @@
-package com.jprompts.request.prompt;
+package com.jprompts.prompt;
 
-import com.jprompts.request.core.Prompt;
+import com.jprompts.core.Prompt;
+import com.jprompts.core.Script;
+import com.jprompts.script.Input;
+import com.jprompts.script.Menu;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Scanner;
 
-abstract class AbstractPrompt implements Prompt {
+public abstract class AbstractPrompt implements Prompt {
     private final @NotNull Scanner sc = new Scanner(System.in);
 
     protected AbstractPrompt() {
